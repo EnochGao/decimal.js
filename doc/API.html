@@ -1,59 +1,14 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="Author" content="MMclaughlin">
   <title>decimal.js API</title>
-  <style>
-html{font-size:100%}
-body{background:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;
-  line-height:1.65em;min-height:100%;margin:0}
-body,i{color:#000}
-.nav{background:#fff;position:fixed;top:0;bottom:0;left:0;width:210px;overflow-y:auto;
-  padding:15px 0 30px 15px}
-div.container{width:600px;margin:50px 0 50px 240px}
-p{margin:0 0 1em;width:600px}
-pre,ul{margin:1em 0}
-h1,h2,h3,h4,h5{margin:0;padding:1.5em 0 0}
-h1,h2{padding:.75em 0}
-h1{font:400 3em Consolas, monaco, monospace;color:#000;margin-bottom:1em}
-h2{font-size:2.25em;color:#f00}
-h3{font-size:1.75em;color:#69d2e7}
-h4{font-size:1.75em;color:#f00;padding-bottom:.75em}
-h5{font-size:1.2em;margin-bottom:.4em}
-h6{font-size:1.1em;margin-bottom:0.8em;padding:0.5em 0}
-dd dt{font-size:1.2em}
-dt{padding-top:.5em}
-dd{padding-top:.35em}
-b{font-weight:700}
-a,a:visited{color:#f00;text-decoration:none}
-a:active,a:hover{outline:0;text-decoration:underline}
-.nav a,.nav b,.nav a:visited{display:block;color:#f00;font-weight:700;margin-top:15px}
-.nav b{color:#69d2e7;margin-top:20px;cursor:default;width:auto}
-ul{list-style-type:none;padding:0 0 0 20px}
-.nav ul{line-height:14px;padding-left:0;margin:5px 0 0}
-.nav ul a,.nav ul a:visited,span{display:inline;color:#000;font-family:Verdana,Geneva,sans-serif;
-  font-size:11px;font-weight:400;margin:0}
-.inset{margin-left:20px;font-size:.9em}
-.nav li{width:auto;margin:0 0 3px}
-.alias{font-style:italic;margin-left:20px}
-table{border-collapse:collapse;border-spacing:0;border:2px solid #a7dbd8;margin:1.75em 0;padding:0}
-td,th{text-align:left;margin:0;padding:2px 5px;border:1px dotted #a7dbd8}
-th{border-top:2px solid #a7dbd8;border-bottom:2px solid #a7dbd8;color:#f00}
-code,pre{font-family:Consolas, monaco, monospace;font-weight:400}
-pre{background:#f5f5f5;white-space:pre-wrap;word-wrap:break-word;border-left:5px solid #a7dbd8;
-  padding:1px 0 1px 15px;margin:1.2em 0}
-code,.nav-title{color:#f00}
-.end{margin-bottom:25px}
-.centre{text-align:center}
-#modes,#configProps{color:#f00}
-.spacer{line-height:0px}
-#faq{margin:3em 0 0}
-li span{float:right;margin-right:10px;color:#c0c0c0}
-#js{font:inherit;color:#f00}
-  </style>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
   <div class="nav">
@@ -61,64 +16,66 @@ li span{float:right;margin-right:10px;color:#c0c0c0}
     <a class='nav-title' href="#">API</a>
 
     <b>CONSTRUCTOR</b>
-    <ul><li><a href="#decimal"><strong>Decimal</strong></a></li></ul>
+    <ul>
+      <li><a href="#decimal"><strong>Decimal</strong></a></li>
+    </ul>
 
     <a href="#methods">Methods</a>
     <ul>
-      <li><a href="#Dabs"       >abs</a></li>
-      <li><a href="#Dacos"      >acos</a></li>
-      <li><a href="#Dacosh"     >acosh</a></li>
-      <li><a href="#Dadd"       >add</a></li>
-      <li><a href="#Dasin"      >asin</a></li>
-      <li><a href="#Dasinh"     >asinh</a></li>
-      <li><a href="#Datan"      >atan</a></li>
-      <li><a href="#Datanh"     >atanh</a></li>
-      <li><a href="#Datan2"     >atan2</a></li>
-      <li><a href="#Dcbrt"      >cbrt</a></li>
-      <li><a href="#Dceil"      >ceil</a></li>
-      <li><a href="#Dclamp"     >clamp</a></li>
-      <li><a href="#Dclone"     >clone</a></li>
-      <li><a href="#Dcos"       >cos</a></li>
-      <li><a href="#Dcosh"      >cosh</a></li>
-      <li><a href="#Ddiv"       >div</a></li>
-      <li><a href="#Dexp"       >exp</a></li>
-      <li><a href="#Dfloor"     >floor</a></li>
-      <li><a href="#Dhypot"     >hypot</a></li>
-      <li><a href="#DisDecimal" >isDecimal</a></li>
-      <li><a href="#Dln"        >ln</a></li>
-      <li><a href="#Dlog"       >log</a></li>
-      <li><a href="#Dlog2"      >log2</a></li>
-      <li><a href="#Dlog10"     >log10</a></li>
-      <li><a href="#Dmax"       >max</a></li>
-      <li><a href="#Dmin"       >min</a></li>
-      <li><a href="#Dmod"       >mod</a></li>
-      <li><a href="#Dmul"       >mul</a></li>
+      <li><a href="#Dabs">abs</a></li>
+      <li><a href="#Dacos">acos</a></li>
+      <li><a href="#Dacosh">acosh</a></li>
+      <li><a href="#Dadd">add</a></li>
+      <li><a href="#Dasin">asin</a></li>
+      <li><a href="#Dasinh">asinh</a></li>
+      <li><a href="#Datan">atan</a></li>
+      <li><a href="#Datanh">atanh</a></li>
+      <li><a href="#Datan2">atan2</a></li>
+      <li><a href="#Dcbrt">cbrt</a></li>
+      <li><a href="#Dceil">ceil</a></li>
+      <li><a href="#Dclamp">clamp</a></li>
+      <li><a href="#Dclone">clone</a></li>
+      <li><a href="#Dcos">cos</a></li>
+      <li><a href="#Dcosh">cosh</a></li>
+      <li><a href="#Ddiv">div</a></li>
+      <li><a href="#Dexp">exp</a></li>
+      <li><a href="#Dfloor">floor</a></li>
+      <li><a href="#Dhypot">hypot</a></li>
+      <li><a href="#DisDecimal">isDecimal</a></li>
+      <li><a href="#Dln">ln</a></li>
+      <li><a href="#Dlog">log</a></li>
+      <li><a href="#Dlog2">log2</a></li>
+      <li><a href="#Dlog10">log10</a></li>
+      <li><a href="#Dmax">max</a></li>
+      <li><a href="#Dmin">min</a></li>
+      <li><a href="#Dmod">mod</a></li>
+      <li><a href="#Dmul">mul</a></li>
       <li><a href="#DnoConflict">noConflict</a></li>
-      <li><a href="#Dpow"       >pow</a></li>
-      <li><a href="#Drandom"    >random</a></li>
-      <li><a href="#Dround"     >round</a></li>
-      <li><a href="#Dset"       >set</a></li>
-      <li><a href="#Dsign"      >sign</a></li>
-      <li><a href="#Dsin"       >sin</a></li>
-      <li><a href="#Dsinh"      >sinh</a></li>
-      <li><a href="#Dsqrt"      >sqrt</a></li>
-      <li><a href="#Dsub"       >sub</a></li>
-      <li><a href="#Dsum"       >sum</a></li>
-      <li><a href="#Dtan"       >tan</a></li>
-      <li><a href="#Dtanh"      >tanh</a></li>
-      <li><a href="#Dtrunc"     >trunc</a></li>
+      <li><a href="#Dpow">pow</a></li>
+      <li><a href="#Drandom">random</a></li>
+      <li><a href="#Dround">round</a></li>
+      <li><a href="#Dset">set</a></li>
+      <li><a href="#Dsign">sign</a></li>
+      <li><a href="#Dsin">sin</a></li>
+      <li><a href="#Dsinh">sinh</a></li>
+      <li><a href="#Dsqrt">sqrt</a></li>
+      <li><a href="#Dsub">sub</a></li>
+      <li><a href="#Dsum">sum</a></li>
+      <li><a href="#Dtan">tan</a></li>
+      <li><a href="#Dtanh">tanh</a></li>
+      <li><a href="#Dtrunc">trunc</a></li>
     </ul>
 
     <a href="#constructor-properties">Properties</a>
     <ul>
       <li><a href="#precision">precision</a></li>
-      <li><a href="#rounding" >rounding</a></li>
-      <li><a href="#minE"     >minE</a></li>
-      <li><a href="#maxE"     >maxE</a></li>
-      <li><a href="#toExpNeg" >toExpNeg</a></li>
-      <li><a href="#toExpPos" >toExpPos</a></li>
-      <li><a href="#modulo"   >modulo</a></li>
-      <li><a href="#crypto"   >crypto</a></li>
+      <li><a href="#rounding">rounding</a></li>
+      <li><a href="#minE">minE</a></li>
+      <li><a href="#maxE">maxE</a></li>
+      <li><a href="#toExpNeg">toExpNeg</a></li>
+      <li><a href="#toExpPos">toExpPos</a></li>
+      <li><a href="#modulo">modulo</a></li>
+      <li><a href="#crypto">crypto</a></li>
       <li class='spacer'>&nbsp;</li>
       <li><a href="#modes">ROUND_UP</a></li>
       <li><a href="#modes">ROUND_DOWN</a></li>
@@ -136,72 +93,72 @@ li span{float:right;margin-right:10px;color:#c0c0c0}
 
     <a href="#prototype-methods">Methods</a>
     <ul>
-      <li><a href="#abs"          >absoluteValue           </a><span>abs</span>     </li>
-      <li><a href="#ceil"         >ceil                    </a>                     </li>
-      <li><a href="#cmp"          >comparedTo              </a><span>cmp</span>     </li>
-      <li><a href="#clamp"        >clampedTo               </a><span>clamp</span>   </li>
-      <li><a href="#cos"          >cosine                  </a><span>cos</span>     </li>
-      <li><a href="#cbrt"         >cubeRoot                </a><span>cbrt</span>    </li>
-      <li><a href="#dp"           >decimalPlaces           </a><span>dp</span>      </li>
-      <li><a href="#div"          >dividedBy               </a><span>div</span>     </li>
-      <li><a href="#divToInt"     >dividedToIntegerBy      </a><span>divToInt</span></li>
-      <li><a href="#eq"           >equals                  </a><span>eq</span>      </li>
-      <li><a href="#floor"        >floor                   </a>                     </li>
-      <li><a href="#gt"           >greaterThan             </a><span>gt</span>      </li>
-      <li><a href="#gte"          >greaterThanOrEqualTo    </a><span>gte</span>     </li>
-      <li><a href="#cosh"         >hyperbolicCosine        </a><span>cosh</span>    </li>
-      <li><a href="#sinh"         >hyperbolicSine          </a><span>sinh</span>    </li>
-      <li><a href="#tanh"         >hyperbolicTangent       </a><span>tanh</span>    </li>
-      <li><a href="#acos"         >inverseCosine           </a><span>acos</span>    </li>
-      <li><a href="#acosh"        >inverseHyperbolicCosine </a><span>acosh</span>   </li>
-      <li><a href="#asinh"        >inverseHyperbolicSine   </a><span>asinh</span>   </li>
-      <li><a href="#atanh"        >inverseHyperbolicTangent</a><span>atanh</span>   </li>
-      <li><a href="#asin"         >inverseSine             </a><span>asin</span>    </li>
-      <li><a href="#atan"         >inverseTangent          </a><span>atan</span>    </li>
-      <li><a href="#isFinite"     >isFinite                </a>                     </li>
-      <li><a href="#isInt"        >isInteger               </a><span>isInt</span>   </li>
-      <li><a href="#isNaN"        >isNaN                   </a>                     </li>
-      <li><a href="#isNeg"        >isNegative              </a><span>isNeg</span>   </li>
-      <li><a href="#isPos"        >isPositive              </a><span>isPos</span>   </li>
-      <li><a href="#isZero"       >isZero                  </a>                     </li>
-      <li><a href="#lt"           >lessThan                </a><span>lt</span>      </li>
-      <li><a href="#lte"          >lessThanOrEqualTo       </a><span>lte</span>     </li>
-      <li><a href="#log"          >logarithm               </a><span>log</span>     </li>
-      <li><a href="#sub"          >minus                   </a><span>sub</span>     </li>
-      <li><a href="#mod"          >modulo                  </a><span>mod</span>     </li>
-      <li><a href="#exp"          >naturalExponential      </a><span>exp</span>     </li>
-      <li><a href="#ln"           >naturalLogarithm        </a><span>ln</span>      </li>
-      <li><a href="#neg"          >negated                 </a><span>neg</span>     </li>
-      <li><a href="#add"          >plus                    </a><span>add</span>     </li>
-      <li><a href="#sd"           >precision               </a><span>sd</span>      </li>
-      <li><a href="#round"        >round                   </a>                     </li>
-      <li><a href="#sin"          >sine                    </a><span>sin</span>     </li>
-      <li><a href="#sqrt"         >squareRoot              </a><span>sqrt</span>    </li>
-      <li><a href="#tan"          >tangent                 </a><span>tan</span>     </li>
-      <li><a href="#mul"          >times                   </a><span>mul</span>     </li>
-      <li><a href="#toBinary"     >toBinary                </a>                     </li>
-      <li><a href="#toDP"         >toDecimalPlaces         </a><span>toDP</span>    </li>
-      <li><a href="#toExponential">toExponential           </a>                     </li>
-      <li><a href="#toFixed"      >toFixed                 </a>                     </li>
-      <li><a href="#toFraction"   >toFraction              </a>                     </li>
-      <li><a href="#toHex"        >toHexadecimal           </a><span>toHex</span>   </li>
-      <li><a href="#toJSON"       >toJSON                  </a>                     </li>
-      <li><a href="#toNearest"    >toNearest               </a>                     </li>
-      <li><a href="#toNumber"     >toNumber                </a>                     </li>
-      <li><a href="#toOctal"      >toOctal                 </a>                     </li>
-      <li><a href="#pow"          >toPower                 </a><span>pow</span>     </li>
-      <li><a href="#toPrecision"  >toPrecision             </a>                     </li>
-      <li><a href="#toSD"         >toSignificantDigits     </a><span>toSD</span>    </li>
-      <li><a href="#toString"     >toString                </a>                     </li>
-      <li><a href="#trunc"        >truncated               </a><span>trunc</span>   </li>
-      <li><a href="#valueOf"      >valueOf                 </a>                     </li>
+      <li><a href="#abs">absoluteValue </a><span>abs</span> </li>
+      <li><a href="#ceil">ceil </a> </li>
+      <li><a href="#cmp">comparedTo </a><span>cmp</span> </li>
+      <li><a href="#clamp">clampedTo </a><span>clamp</span> </li>
+      <li><a href="#cos">cosine </a><span>cos</span> </li>
+      <li><a href="#cbrt">cubeRoot </a><span>cbrt</span> </li>
+      <li><a href="#dp">decimalPlaces </a><span>dp</span> </li>
+      <li><a href="#div">dividedBy </a><span>div</span> </li>
+      <li><a href="#divToInt">dividedToIntegerBy </a><span>divToInt</span></li>
+      <li><a href="#eq">equals </a><span>eq</span> </li>
+      <li><a href="#floor">floor </a> </li>
+      <li><a href="#gt">greaterThan </a><span>gt</span> </li>
+      <li><a href="#gte">greaterThanOrEqualTo </a><span>gte</span> </li>
+      <li><a href="#cosh">hyperbolicCosine </a><span>cosh</span> </li>
+      <li><a href="#sinh">hyperbolicSine </a><span>sinh</span> </li>
+      <li><a href="#tanh">hyperbolicTangent </a><span>tanh</span> </li>
+      <li><a href="#acos">inverseCosine </a><span>acos</span> </li>
+      <li><a href="#acosh">inverseHyperbolicCosine </a><span>acosh</span> </li>
+      <li><a href="#asinh">inverseHyperbolicSine </a><span>asinh</span> </li>
+      <li><a href="#atanh">inverseHyperbolicTangent</a><span>atanh</span> </li>
+      <li><a href="#asin">inverseSine </a><span>asin</span> </li>
+      <li><a href="#atan">inverseTangent </a><span>atan</span> </li>
+      <li><a href="#isFinite">isFinite </a> </li>
+      <li><a href="#isInt">isInteger </a><span>isInt</span> </li>
+      <li><a href="#isNaN">isNaN </a> </li>
+      <li><a href="#isNeg">isNegative </a><span>isNeg</span> </li>
+      <li><a href="#isPos">isPositive </a><span>isPos</span> </li>
+      <li><a href="#isZero">isZero </a> </li>
+      <li><a href="#lt">lessThan </a><span>lt</span> </li>
+      <li><a href="#lte">lessThanOrEqualTo </a><span>lte</span> </li>
+      <li><a href="#log">logarithm </a><span>log</span> </li>
+      <li><a href="#sub">minus </a><span>sub</span> </li>
+      <li><a href="#mod">modulo </a><span>mod</span> </li>
+      <li><a href="#exp">naturalExponential </a><span>exp</span> </li>
+      <li><a href="#ln">naturalLogarithm </a><span>ln</span> </li>
+      <li><a href="#neg">negated </a><span>neg</span> </li>
+      <li><a href="#add">plus </a><span>add</span> </li>
+      <li><a href="#sd">precision </a><span>sd</span> </li>
+      <li><a href="#round">round </a> </li>
+      <li><a href="#sin">sine </a><span>sin</span> </li>
+      <li><a href="#sqrt">squareRoot </a><span>sqrt</span> </li>
+      <li><a href="#tan">tangent </a><span>tan</span> </li>
+      <li><a href="#mul">times </a><span>mul</span> </li>
+      <li><a href="#toBinary">toBinary </a> </li>
+      <li><a href="#toDP">toDecimalPlaces </a><span>toDP</span> </li>
+      <li><a href="#toExponential">toExponential </a> </li>
+      <li><a href="#toFixed">toFixed </a> </li>
+      <li><a href="#toFraction">toFraction </a> </li>
+      <li><a href="#toHex">toHexadecimal </a><span>toHex</span> </li>
+      <li><a href="#toJSON">toJSON </a> </li>
+      <li><a href="#toNearest">toNearest </a> </li>
+      <li><a href="#toNumber">toNumber </a> </li>
+      <li><a href="#toOctal">toOctal </a> </li>
+      <li><a href="#pow">toPower </a><span>pow</span> </li>
+      <li><a href="#toPrecision">toPrecision </a> </li>
+      <li><a href="#toSD">toSignificantDigits </a><span>toSD</span> </li>
+      <li><a href="#toString">toString </a> </li>
+      <li><a href="#trunc">truncated </a><span>trunc</span> </li>
+      <li><a href="#valueOf">valueOf </a> </li>
     </ul>
 
     <a href="#instance-properties">Properties</a>
     <ul>
-      <li><a href="#digits"   >d</a><span>digits</span></li>
-      <li><a href="#exponent" >e</a><span>exponent</span></li>
-      <li><a href="#sign"     >s</a><span>sign</span></li>
+      <li><a href="#digits">d</a><span>digits</span></li>
+      <li><a href="#exponent">e</a><span>exponent</span></li>
+      <li><a href="#sign">s</a><span>sign</span></li>
     </ul>
 
     <a href="#zero-nan-infinity">Zero, NaN &amp; Infinity</a>
@@ -416,7 +373,8 @@ a.equals(b)                    // true</pre>
     </p>
     <p>
       See <a href='#Pi'><code>Pi</code></a> and
-      <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2'><code>Math.atan2()</code>.</a>
+      <a
+        href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2'><code>Math.atan2()</code>.</a>
     </p>
     <pre>r = Decimal.atan2(y, x)</pre>
 
@@ -794,7 +752,10 @@ Decimal.set({ precision: 50, defaults: true })</pre>
     <h5 id="Dsign">sign<code class='inset'>.sign(x) <i>&rArr; number</i></code></h5>
     <p><code>x</code>: <i>number|string|Decimal</i></p>
     <table>
-      <tr><th>Returns</th><th>&nbsp;</th></tr>
+      <tr>
+        <th>Returns</th>
+        <th>&nbsp;</th>
+      </tr>
       <tr>
         <td class='centre'><code>1</code></td>
         <td>if the value of <code>x</code> is non-zero and its sign is positive</td>
@@ -1122,13 +1083,19 @@ Decimal.set({ toExpPos: 0 })</pre>
       be used, they may not give useful results.
     </p>
     <table>
-      <tr><th>Property</th><th>Value</th><th>Description</th></tr>
       <tr>
-        <td>ROUND_UP</td><td class='centre'>0</td>
+        <th>Property</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ROUND_UP</td>
+        <td class='centre'>0</td>
         <td>The remainder is positive if the dividend is negative, else is negative</td>
       </tr>
       <tr>
-        <td>ROUND_DOWN</td><td class='centre'>1</td>
+        <td>ROUND_DOWN</td>
+        <td class='centre'>1</td>
         <td>
           The remainder has the same sign as the dividend.<br />
           This uses truncating division and matches the behaviour of JavaScript's remainder
@@ -1136,23 +1103,26 @@ Decimal.set({ toExpPos: 0 })</pre>
         </td>
       </tr>
       <tr>
-        <td>ROUND_FLOOR</td><td class='centre'>3</td>
+        <td>ROUND_FLOOR</td>
+        <td class='centre'>3</td>
         <td>
           The remainder has the same sign as the divisor.<br />
           (This matches Python's <code>%</code> operator)
         </td>
       </tr>
       <tr>
-        <td>ROUND_HALF_EVEN</td><td class='centre'>6</td>
+        <td>ROUND_HALF_EVEN</td>
+        <td class='centre'>6</td>
         <td>The <i>IEEE 754</i> remainder function</td>
       </tr>
-       <tr>
-         <td>EUCLID</td><td class='centre'>9</td>
-         <td>
-           The remainder is always positive.<br />
-           Euclidian division: <code>q = sign(x) * floor(a / abs(x))</code>.
-         </td>
-       </tr>
+      <tr>
+        <td>EUCLID</td>
+        <td class='centre'>9</td>
+        <td>
+          The remainder is always positive.<br />
+          Euclidian division: <code>q = sign(x) * floor(a / abs(x))</code>.
+        </td>
+      </tr>
     </table>
     <p>
       The rounding/modulo modes are available as enumerated properties of the Decimal constructor.
@@ -1189,37 +1159,63 @@ Decimal.crypto                     // true</pre>
     </p>
     <p>Rounding modes 0 to 6 (inclusive) are the same as those of Java's BigDecimal class.</p>
     <table>
-      <tr><th>Property</th><th>Value</th><th>Description</th></tr>
-      <tr><td><b>ROUND_UP</b></td><td class='centre'>0</td><td>Rounds away from zero</td></tr>
-      <tr><td><b>ROUND_DOWN</b></td><td class='centre'>1</td><td>Rounds towards zero</td></tr>
-      <tr><td><b>ROUND_CEIL</b></td><td class='centre'>2</td><td>Rounds towards Infinity</td></tr>
-      <tr><td><b>ROUND_FLOOR</b></td><td class='centre'>3</td><td>Rounds towards -Infinity</td></tr>
       <tr>
-        <td><b>ROUND_HALF_UP</b></td><td class='centre'>4</td>
+        <th>Property</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><b>ROUND_UP</b></td>
+        <td class='centre'>0</td>
+        <td>Rounds away from zero</td>
+      </tr>
+      <tr>
+        <td><b>ROUND_DOWN</b></td>
+        <td class='centre'>1</td>
+        <td>Rounds towards zero</td>
+      </tr>
+      <tr>
+        <td><b>ROUND_CEIL</b></td>
+        <td class='centre'>2</td>
+        <td>Rounds towards Infinity</td>
+      </tr>
+      <tr>
+        <td><b>ROUND_FLOOR</b></td>
+        <td class='centre'>3</td>
+        <td>Rounds towards -Infinity</td>
+      </tr>
+      <tr>
+        <td><b>ROUND_HALF_UP</b></td>
+        <td class='centre'>4</td>
         <td>Rounds towards nearest neighbour.<br />If equidistant, rounds away from zero</td>
       </tr>
       <tr>
-        <td><b>ROUND_HALF_DOWN</b></td><td class='centre'>5</td>
+        <td><b>ROUND_HALF_DOWN</b></td>
+        <td class='centre'>5</td>
         <td>Rounds towards nearest neighbour.<br />If equidistant, rounds towards zero</td>
       </tr>
       <tr>
-        <td><b>ROUND_HALF_EVEN</b></td><td class='centre'>6</td>
+        <td><b>ROUND_HALF_EVEN</b></td>
+        <td class='centre'>6</td>
         <td>
           Rounds towards nearest neighbour.<br />If equidistant, rounds towards even neighbour
         </td>
       </tr>
       <tr>
-        <td><b>ROUND_HALF_CEIL</b></td><td class='centre'>7</td>
+        <td><b>ROUND_HALF_CEIL</b></td>
+        <td class='centre'>7</td>
         <td>Rounds towards nearest neighbour.<br />If equidistant, rounds towards Infinity</td>
       </tr>
       <tr>
-        <td><b>ROUND_HALF_FLOOR</b></td><td class='centre'>8</td>
+        <td><b>ROUND_HALF_FLOOR</b></td>
+        <td class='centre'>8</td>
         <td>Rounds towards nearest neighbour.<br />If equidistant, rounds towards -Infinity</td>
       </tr>
-       <tr>
-         <td><b>EUCLID</b></td><td class='centre'>9</td>
-         <td>Not a rounding mode, see <a href='#modulo'>modulo</a></td>
-       </tr>
+      <tr>
+        <td><b>EUCLID</b></td>
+        <td class='centre'>9</td>
+        <td>Not a rounding mode, see <a href='#modulo'>modulo</a></td>
+      </tr>
     </table>
     <pre>Decimal.set({ rounding: Decimal.ROUND_CEIL })
 Decimal.set({ rounding: 2 })       // equivalent
@@ -1305,7 +1301,10 @@ x.clamp(-10, -0.1)            // '-0.1'</pre>
     <h5 id="cmp">comparedTo<code class='inset'>.cmp(x) <i>&rArr; number</i></code></h5>
     <p><code>x</code>: <i>number|string|Decimal</i></p>
     <table>
-      <tr><th>Returns</th><th>&nbsp;</th></tr>
+      <tr>
+        <th>Returns</th>
+        <th>&nbsp;</th>
+      </tr>
       <tr>
         <td class='centre'><code>1</code></td>
         <td>if the value of this Decimal is greater than the value of <code>x</code></td>
@@ -1721,7 +1720,7 @@ new Decimal(-0).isNegative()             // true
 
 
 
-     <h5 id="isPos">isPositive<code class='inset'>.isPos() <i>&rArr; boolean</i></code></h5>
+    <h5 id="isPos">isPositive<code class='inset'>.isPos() <i>&rArr; boolean</i></code></h5>
     <p>
       Returns <code>true</code> if the value of this Decimal is positive, otherwise returns
       <code>false</code>.
@@ -1869,7 +1868,7 @@ x = new Decimal(1)
 x.naturalExponential()                   // '2.7182818284590452354'
 y = new Decimal(2)
 y.exp()                                  // '7.3890560989306502272'</pre>
-     <p>
+    <p>
       The return value will be correctly rounded, i.e. rounded as if the result was first calculated
       to an infinite number of correct digits before rounding. (The mathematical result of the
       exponential function is non-terminating, unless its argument is <code>0</code>).
@@ -2322,7 +2321,7 @@ z = new Decimal(-0)
 
 
 
-     <h5 id="toOctal">
+    <h5 id="toOctal">
       toOctal<code class='inset'>.toOctal([sd [, rm]]) <i>&rArr; string</i></code>
     </h5>
     <p>
@@ -2593,7 +2592,7 @@ z.s                                      // -1</pre>
       The table below shows how <code>&plusmn;0</code>, <code>NaN</code> and
       <code>&plusmn;Infinity</code> are stored.
     </p>
-       <table>
+    <table>
       <tr>
         <th> </th>
         <th>&plusmn;0</th>
@@ -2660,7 +2659,7 @@ try {
       precision of the argument passed to them. To calculate the actual figure use:
     </p>
     <p><b>maximum_result_precision = 1000 - argument_precision</b></p>
-      For example, the following both work fine:
+    For example, the following both work fine:
     <pre>
 Decimal.set({precision: 991}).tan(123456789)
 Decimal.set({precision: 9}).tan(991_digit_number)</pre>
@@ -2709,7 +2708,7 @@ z = x.multiply(y)                 // 4.1400000</pre>
       indicates that the value is in the range <code>1.09995</code> to <code>1.10005</code>.
     </p>
     <p>
-      If we  add the two lowest values in the ranges we have, <code>0.95 + 1.09995 = 2.04995</code>,
+      If we add the two lowest values in the ranges we have, <code>0.95 + 1.09995 = 2.04995</code>,
       and if we add the two highest values we have, <code>1.05 + 1.10005 = 2.15005</code>, so the
       range of the result of the addition implied by the precision of its operands is
       <code>2.04995</code> to <code>2.15005</code>.
@@ -2722,7 +2721,7 @@ z = x.multiply(y)                 // 4.1400000</pre>
     <p>
       In the second example, the true range is <code>4.122744</code> to <code>4.157256</code> yet
       the BigDecimal answer of <code>4.1400000</code> indicates a range of <code>4.13999995</code>
-      to  <code>4.14000005</code>. Again, the precision implied by the trailing zeros may be
+      to <code>4.14000005</code>. Again, the precision implied by the trailing zeros may be
       misleading.
     </p>
     <p>
@@ -2733,4 +2732,5 @@ z = x.multiply(y)                 // 4.1400000</pre>
   </div>
 
 </body>
+
 </html>
